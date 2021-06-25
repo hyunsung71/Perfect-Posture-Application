@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ResultActivity">
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginStart="5sp"
+        android:layout_marginLeft="5sp"
+        android:text="로그아웃" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoutButton"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/postureImage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/side" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/buttonsCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/cameraButton"
+                android:layout_width="700px"
+                android:layout_height="450px"
+                android:layout_gravity="center"
+                android:layout_marginTop="130dp"
+                android:drawableLeft="@drawable/camera"
+                android:paddingLeft="20dp"
+                android:text="사진\n촬영하기"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/purple_500"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/galleryButton"
+                android:layout_width="700px"
+                android:layout_height="450px"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:drawableLeft="@drawable/gallery"
+                android:paddingLeft="20dp"
+                android:text="갤러리에서\n가져오기"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/purple_500"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/cardView1"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/whiteImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/white_radius" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/resultCardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/cardView1"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/turtleneckResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Turtle Neck : 1.00"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/normalResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Normal : 0.00"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/exerciseTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exerciseButton"
+        android:gravity="center"
+        android:text="교정 방법 알아보기"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/exerciseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/stretchingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="6dp"
+            android:insetRight="3dp"
+            android:text="스트레칭" />
+
+        <Button
+            android:id="@+id/chimaekButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="3dp"
+            android:insetRight="3dp"
+            android:text="치맥운동" />
+
+        <Button
+            android:id="@+id/diagnosticButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetLeft="3dp"
+            android:insetRight="6dp"
+            android:text="자세교정" />
+    </LinearLayout>
+
+</RelativeLayout>

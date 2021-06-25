@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:text="로그아웃" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/turtleneckButton"
+                android:layout_width="700px"
+                android:layout_height="450px"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:drawableLeft="@drawable/turtle"
+                android:paddingLeft="30dp"
+                android:text="거북목\n진단하기"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/purple_500"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/asymmetryButton"
+                android:layout_width="700px"
+                android:layout_height="450px"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:drawableLeft="@drawable/body"
+                android:paddingLeft="30dp"
+                android:text="신체비대칭\n진단하기"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="12dp"
+                app:strokeColor="@color/purple_500"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
